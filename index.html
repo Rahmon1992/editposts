@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ChairNerd, the SeatGeek Blog</title>
+  <script src="//use.typekit.net/wtm0ems.js"></script>
+  <script>try { Typekit.load(); } catch (e) { }</script>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic|Lora:400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+  <link rel="stylesheet" href="src/css/reset.css">
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body>
+  <div class="blog-header">
+    <img src="SeatGeekLogo.svg" height="54px" /> ChairNerd
+  </div>
+  <div class="blog-body">
+    <div class="blog-body__form-section">
+      <form class="blog-body__form-section__form">
+        <label for="title" class="blog-body__form-section__form__title-label">Title</label>
+        <input name="title" class="blog-body__form-section__form__title">
+        <label for="body" class="blog-body__form-section__form__body-label">Body</label>
+        <textarea name="body" class="blog-body__form-section__form__body"></textarea>
+        <div>
+          <button class="blog-body__form-section__form__submit">Create Post</button>
+          <a class="blog-post-undo" href="#"><i class="fas fa-undo"></i></a>
+        </div>
+      </form>
+    </div>
+    <div class="blog-body__content">
+    </div>
+  </div>
+  <script type="text/template" id="blog-post-template">
+      <div class="blog-post">         
+        <div class="blog-post__title">
+          <%= "${title}" %>
+          <a class="blog-post-delete" data-id="<%= '${id}' %>" href="#">
+              <i class="fas fa-trash-alt"></i>
+          </a>
+        </div>
+        <div class="blog-post__body">
+          <%= "${body}" %>
+        </div>
+        
+        <div class="blog-post__divider"></div>
+      </div>
+    </script>
+</body>
+
+</html>
